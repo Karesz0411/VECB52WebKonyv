@@ -1,0 +1,13 @@
+Mai óra anyaga:
+
+git clone <repository URL>: Ez a parancs egy távoli git repositoryt másoljuk le a saját gépünkre, így lokálisan tudunk vele dolgozni.
+
+git add <file/folder>: A változtatásokat, amiket szeretnénk commitolni (vagyis hozzáadni a következő commit-hoz), ezzel a paranccsal jelöljük meg.
+
+git commit -m "commit message": Ezzel a paranccsal rögzítjük a változtatásokat a lokális repositoryban. A -m kapcsolóval tudsz rögtön egy üzenetet is mellékelni a commithez.
+
+git push: A commitokat a távoli repositoryba továbbítjuk. Tehát ha befejeztünk egy munkát, és szeretnénk megosztani másokkal, ezzel a paranccsal tehetjük meg.
+
+git pull: A távoli repository-ból frissítjük a lokálisat. Tehát ha mások hozzáadtak változtatásokat a közös repository-hoz, ezzel a paranccsal le tudjuk őket tölteni a saját gépünkre.
+
+git status: Ez a parancs megmutatja a jelenlegi munkamenetünk állapotát. Megjeleníti, hogy mely fájlok módosultak, melyeket már hozzáadtunk a staging area-hoz, stb.
