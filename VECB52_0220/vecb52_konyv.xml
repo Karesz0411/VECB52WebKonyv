@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vecb52_konyv>
+    <book>
+        <author>Angster Erzsébet</author>
+        <title>Objektumorientált tervezés és programozás : Java</title>
+        <release_date>2001</release_date>
+        <publisher>4KÖR Bt.</publisher>
+    </book>
+
+    <book>
+        <author>DePasquale, Peter J.</author>
+        <title>Java zsebkönyv</title>
+        <release_date>2006</release_date>
+        <publisher>kiskapu kiadó</publisher>
+    </book>
+
+    <book>
+        <author>Serfőző Péter</author>
+        <title>USER INTERFACE DESIGN - UI Design és Digitális tervezés</title>
+        <release_date>2022</release_date>
+        <publisher>brandguide.hu</publisher>
+    </book>
+</vecb52_konyv>
