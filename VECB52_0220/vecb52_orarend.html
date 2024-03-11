@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Órarend</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Időpont</th>
+                <th>Tantárgy</th>
+                <th>Helyszín</th>
+            </tr>
+        </thead>
+        <tbody id="eventsTableBody">
+            <tr>
+                <td>2024-03-11T09:00:00Z - 2024-03-11T12:45:00Z</td>
+                <td>Valószínűségszámítás és statisztika (THE_00566_N_5_K) - 2NPTI - Dr. Földvári Attila József - Órarend</td>
+                <td>Teológia Szemere utcai bejárat földszint nagy terem (Teologia_Szemere_1/B)</td>
+            </tr>
+            <tr>
+                <td>2024-03-12T09:00:00Z - 2024-03-12T12:45:00Z</td>
+                <td>Polgári jog (THE_00538_N_5_K) - 3NPTI - Dr. Göndöcs József - Órarend</td>
+                <td>Teológia Szemere utcai bejárat földszint nagy terem (Teologia_Szemere_1/B)</td>
+            </tr>
+            <tr>
+                <td>2024-03-13T09:00:00Z - 2024-03-13T12:45:00Z</td>
+                <td>Matematika és statisztika a bölcsészettudományban (THE_00620_N_5_K) - 2NPTI - Dr. Horváth András - Órarend</td>
+                <td>Teológia Szemere utcai bejárat földszint nagy terem (Teologia_Szemere_1/B)</td>
+            </tr>
+            <tr>
+                <td>2024-03-14T09:00:00Z - 2024-03-14T12:45:00Z</td>
+                <td>Demográfia I. (THE_00589_N_5_K) - 2NPTI - Dr. Sándor Judit - Órarend</td>
+                <td>Teológia Szemere utcai bejárat földszint nagy terem (Teologia_Szemere_1/B)</td>
+            </tr>
+            <tr>
+                <td>2024-03-15T09:00:00Z - 2024-03-15T12:45:00Z</td>
+                <td>Állam- és jogtudományi alapismeretek (THE_00539_N_5_K) - 3NPTI - Dr. Göndöcs József - Órarend</td>
+                <td>Teológia Szemere utcai bejárat földszint nagy terem (Teologia_Szemere_1/B)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('vecb52_orarend.xml')
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, 'text/xml');
+                    const events = xmlDoc.getElementsByTagName('event');
+                    const tableBody = document.getElementById('eventsTableBody');
+
+                    for (let i = 0; i < events.length; i++) {
+                        const event = events[i];
+                        const summary = event.getElementsByTagName('summary')[0].textContent;
+                        const location = event.getElementsByTagName('location')[0].textContent;
+                        const start = new Date(event.getElementsByTagName('start')[0].textContent).toLocaleString();
+                        const end = new Date(event.getElementsByTagName('end')[0].textContent).toLocaleString();
+
+                        const row = tableBody.insertRow();
+                        const timeCell = row.insertCell(0);
+                        const subjectCell = row.insertCell(1);
+                        const locationCell = row.insertCell(2);
+
+                        timeCell.textContent = start + ' - ' + end;
+                        subjectCell.textContent = summary;
+                        locationCell.textContent = location;
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
