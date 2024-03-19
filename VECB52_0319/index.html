@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <title>VECB52_0305</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="content-type" content="text/html" />
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <style>
+            form {
+                margin-left: 0;
+                margin-right: 60%;
+                background-color: rgb(40, 181, 188);
+                padding: 2em;
+            }
+
+            .slider {
+                -webkit-appearance: none;
+                width: 25%;
+                height: 5px;
+                border-radius: 2px;
+                background: #d3d3d3;
+                outline: none;
+                opacity: 0.8;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+            }
+
+            .slider:hover {
+                opacity: 1;
+            }
+
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: #04AA6D;
+                cursor: pointer;
+            }
+
+            .slider::-moz-range-thumb {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #04AA6D;
+                cursor: pointer;
+            }
+            .slider-value {
+                display: inline-block;
+                width: 30px;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            VECB52_űrlap
+        </header>
+        <form id = "urlap" name = "urlap" action="form_feldolgozo.php" method="POST" target = "_self">
+                <label for = "nev">Név:</label>
+                <input type = "text" id = "nev" name = "nev" required autocomplete="off" pattern="[a-zA-ZöüóőúéáűíÖÜÓŐÚÉÁÍ]{5,50}" autofocus/>
+            <br>
+                <label for = "pin_kod">Pin kód:</label>
+                <input type = "text" id = "pin_kod" name = "pin_kod" autocomplete="off" required pattern="[0-9]{4}"/>
+            <br>
+                <label for = "kedvenc_gyumolcs">Kedvenc gyümölcs:</label>
+                <input list = "kedvenc_gyumolcsok" name = "kedvenc_gyumolcs" id = "kedvenc_gyumolcs">
+                <datalist id = "kedvenc_gyumolcsok">
+                    <option value = "alma">250ft/kg</option>
+                    <option value = "cseresznye">230ft/kg</option>
+                    <option value = "körte">220ft/kg</option>
+                    <option value = "görögdinnye">450ft/kg</option>
+                    <option value = "ananász">950ft/kg</option>
+                </datalist>
+            <br>
+                <label for = "eletkor">Életkor:</label>
+                <input type = "number" id = "eletkor" name = "eletkor" min = "1" max = "100" />
+            <br>
+                <label for = "labmeret">Lábméret:</label>
+                <input type = "number" id = "labmeret" name = "labmeret" min = "25" max = "50" step = "0.5"/>
+            <br>
+                <label for = "onbizalom">Önbizalom:</label>
+                <span class = "bal_ertek">0</span>
+                <input type = "range" id = "onbizalom" name = "onbizalom" min = "0" max = "100" value = "5" class = "slider">
+                <span class = "jobb_ertek">100</span>
+        </form>
+        <br>
+            <input type="submit" value="Elküld"  form = "urlap" formaction = "form_feldolgozo.php" formmethod="POST">
+            <input type="submit" value="Elküld ellenőrzés nélkül" form = "urlap" formnovalidate formtarget="ujablak">
+    </body>
+</html>
