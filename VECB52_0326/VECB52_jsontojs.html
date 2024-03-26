@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <title>VECB52_0326</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="content-type" content="text/html" />
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+    </head>
+    <body>
+        <header>
+            VECB52: JSON, XML
+        </header>
+
+        <div id="jsonKonyvek"></div>
+        <div id="xmlKonyvek"></div>
+
+        <script>
+            // JSON adatok
+            const jsonKonyvekAdatok = {
+                "konyvek": [
+                    {
+                        "cim": "Java 2 I-II. -Utikalauz programozoknak 5.0",
+                        "szerzo": "Nyekne Dr. Gaizler Judit",
+                        "kiadas": 2009,
+                        "nyelv": "Magyar"
+                    },
+                    {
+                        "cim": "C# programozas lepesrol lepesre",
+                        "szerzo": "Reiter Istvan",
+                        "kiadas": 2018,
+                        "nyelv": "Magyar"
+                    }
+                ]
+            };
+
+            // XML adatok
+            const xmlKonyvekAdatok = `
+                <konyvek>
+                    <konyv>
+                        <cim>Java 2 I-II. -Utikalauz programozoknak 5.0</cim>
+                        <szerzo>Nyekne Dr. Gaizler Judit</szerzo>
+                        <kiadas>2009</kiadas>
+                        <nyelv>Magyar</nyelv>
+                    </konyv>
+                    <konyv>
+                        <cim>C# programozas lepesrol lepesre</cim>
+                        <szerzo>Reiter Istvan</szerzo>
+                        <kiadas>2018</kiadas>
+                        <nyelv>Magyar</nyelv>
+                    </konyv>
+                </konyvek>
+            `;
+
+            const jsonKonyvekDiv = document.getElementById('jsonKonyvek');
+            jsonKonyvekDiv.innerHTML = '<h2>JSON-ból beolvasva:</h2>';
+            jsonKonyvekAdatok.konyvek.forEach(konyv => {
+                const konyvInfo = `<p><strong>Cím:</strong> ${konyv.cim}</p>
+                                <p><strong>Szerző:</strong> ${konyv.szerzo}</p>
+                                <p><strong>Kiadás:</strong> ${konyv.kiadas}</p>
+                                <p><strong>Nyelv:</strong> ${konyv.nyelv}</p><br>`;
+                jsonKonyvekDiv.innerHTML += konyvInfo;
+            });
+
+            const xmlKonyvekDiv = document.getElementById('xmlKonyvek');
+            xmlKonyvekDiv.innerHTML = '<h2>XML-ból beolvasva:</h2>';
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlKonyvekAdatok, 'application/xml');
+            const xmlKonyvek = xmlDoc.querySelectorAll('konyv');
+            xmlKonyvek.forEach(konyv => {
+                const cim = konyv.querySelector('cim').textContent;
+                const szerzo = konyv.querySelector('szerzo').textContent;
+                const kiadas = konyv.querySelector('kiadas').textContent;
+                const nyelv = konyv.querySelector('nyelv').textContent;
+                const konyvInfo = `<p><strong>Cím:</strong> ${cim}</p>
+                                <p><strong>Szerző:</strong> ${szerzo}</p>
+                                <p><strong>Kiadás:</strong> ${kiadas}</p>
+                                <p><strong>Nyelv:</strong> ${nyelv}</p><br>`;
+                xmlKonyvekDiv.innerHTML += konyvInfo;
+            });
+        </script>
+    </body>
+</html>

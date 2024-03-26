@@ -1,0 +1,14 @@
+<könyvek>
+    <könyv>
+        <cím>Java 2 I-II. -Utikalauz programozóknak 5.0</cím>
+        <szerző>Nyékné Dr. Gaizler Judit</szerző>
+        <kiadás>2009</kiadás>
+        <nyelv>Magyar</nyelv>
+    </könyv>
+    <könyv>
+        <cím>C# programozás lépésről lépésre</cím>
+        <szerző>Reiter István</szerző>
+        <kiadás>2018</kiadás>
+        <nyelv>Magyar</nyelv>
+    </könyv>
+</könyvek>
