@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <title>JavaScript objektum módosítása!</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="content-type" content="text/html" />
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 300px;
+            }
+            th, td {
+                border: 2px solid black;
+                padding: 16px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            VECB52 könyvek
+        </header>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const VECB52 = [
+                    {
+                        "cím": "Java XML and JSON",
+                        "ár": 0,
+                        "születés": "2005-10-15"
+                    },
+                    {
+                        "cím": "JavaScript to JSON",
+                        "ár": 20,
+                        "születés": "2010-06-28"
+                    },
+                    {
+                        "cím": "Scala for the Impatient",
+                        "ár": 1000,
+                        "születés": "2014-09-20"
+                    },
+                    {
+                        "cím": "Scala in Depth",
+                        "ár": 1300,
+                        "születés": "2016-03-10"
+                    }
+                ];
+
+                function jsonTablazatMegjelenites() {
+                    const rekordokTartalom = document.getElementById("VECB52_rekordok_tartalom");
+
+                    VECB52.forEach(rekord => {
+                        const rekordKonténer = document.createElement("td");
+
+                        // Módosított név
+                        const modositottNev = "Módosított: " + rekord.cím;
+
+                        // Dátum formázása
+                        const szuletesDatum = new Date(rekord.születés);
+                        const formattedDate = szuletesDatum.toLocaleDateString('hu-HU');
+
+                        rekordKonténer.innerHTML = `
+                            <table border = "2">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <b>Cím</b>
+                                        </td>
+                                        <td width = "300">
+                                            ${modositottNev}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Ár</b>
+                                        </td>
+                                        <td width = "300">
+                                            ${rekord.ár}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Születés</b>
+                                        </td>
+                                        <td width = "300">
+                                            ${formattedDate}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        `;
+
+                        rekordokTartalom.appendChild(rekordKonténer);
+                    });
+                }
+
+                jsonTablazatMegjelenites();
+            });
+        </script>
+
+        <section id="tartalom">
+            <table border="2">
+                <tbody>
+                    <tr id="VECB52_rekordok_tartalom"></tr>
+                </tbody>
+            </table>
+        </section>
+    </body>
+</html>
