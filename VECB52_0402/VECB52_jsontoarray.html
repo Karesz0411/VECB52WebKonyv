@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <title>Hozzáférés JSON-objektumba beágyazott tömb értékéhez</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="content-type" content="text/html" />
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+    </head>
+    <body>
+        <header>
+            VECB52: Hozzáférés JSON-objektumba beágyazott tömb értékéhez
+        </header>
+
+        <div id = "result"></div>
+        
+        <script>
+            const MKObj = {"name" : "Mihály Károly", "age" :  20, "cars": ["Nissan", "Ford", "Suzuki"]};
+
+            let second_car = MKObj.cars[1];
+
+            document.getElementById('result').innerText = 'A második autó: ' + second_car;
+        </script>
+        
+    </body>
+</html>

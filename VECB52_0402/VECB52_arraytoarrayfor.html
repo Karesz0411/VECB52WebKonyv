@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <title>Tömbökön belüli tömbök ciklusa</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="content-type" content="text/html" />
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+    </head>
+    <body>
+        <header>
+            VECB52: Tömbökön belüli tömbök ciklusa
+        </header>
+        <div id="carList"></div>
+
+        <script>
+            const MKObj = {
+                name: "Mihály Károly",
+                age: 21,
+                cars: [
+                    { name: "Toyota", models: ["CHR", "Corolla", "Proace"] },
+                    { name: "Ford", models: ["Kuga", "Mondeo", "Mustang"] },
+                    { name: "BMW", models: ["320", "x3", "x5"] },
+                    { name: "Fiat", models: ["500", "Panda", "Tipo"] }
+                ]
+            };
+
+            let carListDiv = document.getElementById("carList");
+
+            for (let i = 0; i < MKObj.cars.length; i++) {
+                let car = MKObj.cars[i];
+                let carName = car.name;
+    
+                let carHeading = document.createElement("h3");
+                carHeading.textContent = "Márkanév: " + carName;
+
+                carListDiv.appendChild(carHeading);
+                let modelsList = document.createElement("ul");
+                
+                for (let j = 0; j < car.models.length; j++) {
+                    let model = car.models[j];
+                    let modelItem = document.createElement("li");
+                    modelItem.textContent = "Típus: " + model;
+
+                    modelsList.appendChild(modelItem);
+                }
+                carListDiv.appendChild(modelsList);
+            }
+        </script>
+    </body>
+</html>
