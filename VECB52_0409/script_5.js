@@ -56,7 +56,7 @@ $(document).ready(function(){
             $(this).slideDown(2000, function() {
                 if (!isOpen) {
                     $(this).animate({
-                        width: '+=300',
+                        width: '+=100',
                         marginLeft: '+=300'
                     }, 2000, function() {
                         isOpen = true;

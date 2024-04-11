@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-hu">
+    <head>
+        <title>VECB52_0409</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="content-type" content="text/html" />
+        <meta name="description" content="JQ" />
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            #terulet {
+                background-color: lightgrey;
+                width: fit-content;
+            }
+            #bold { 
+                font-weight: bold;
+            }    
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>JQuery - AJAX feladat</h1>
+        </header>
+        <p id = "bold">Kattintson az adatok betöltése gombra, a fájl betöltéséhez</p>
+
+        <div id="terulet">TERÜLET</div>
+        <button id="betoltes">Adatok betöltése</button>
+
+        <script>
+            let jsonData = {
+                "calendar": {
+                    "VECB52": {
+                        "event": [
+                            {
+                                "summary": "Valószínűségszámítás és statisztika",
+                                "location": "Teologia_Szemere_1/B",
+                                "start": "2024-03-11 09:00",
+                                "end": "2024-03-11 12:45"
+                            },
+                            {
+                                "summary": "Polgári jog",
+                                "location": "Teologia_Szemere_2/B",
+                                "start": "2024-03-12 09:00",
+                                "end": "2024-03-12 12:45"
+                            },
+                            {
+                                "summary": "Matematika és statisztika a bölcsészettudományban",
+                                "location": "Teologia_Szemere_1/A",
+                                "start": "2024-03-13 09:00",
+                                "end": "2024-03-13 12:45"
+                            },
+                            {
+                                "summary": "Demográfia I. ",
+                                "location": "Teologia_Szemere_1/B",
+                                "start": "2024-03-14 09:00",
+                                "end": "2024-03-14 12:45"
+                            },
+                            {
+                                "summary": "Állam- és jogtudományi alapismeretek",
+                                "location": "Teologia_Szemere_1/B",
+                                "start": "2024-03-15 09:00",
+                                "end": "2024-03-15 12:45"
+                            }
+                        ]
+                    }
+                }
+            };
+
+            $(document).ready(function () {
+                $('#betoltes').click(function () {
+                    let teruletDiv = $('#terulet');
+                    teruletDiv.empty();
+
+                    jsonData.calendar.VECB52.event.forEach(function (event) {
+                        let eventDiv = $('<div>');
+                        eventDiv.append('<strong>Összefoglaló:</strong> ' + event.summary + '<br>');
+                        eventDiv.append('<strong>Helyszín:</strong> ' + event.location + '<br>');
+                        eventDiv.append('<strong>Kezdés:</strong> ' + new Date(event.start).toLocaleString() + '<br>');
+                        eventDiv.append('<strong>Vége:</strong> ' + new Date(event.end).toLocaleString() + '<br><br>');
+                        teruletDiv.append(eventDiv);
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

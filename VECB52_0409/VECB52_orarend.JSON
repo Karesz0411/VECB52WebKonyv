@@ -1,0 +1,38 @@
+{
+	"calendar": {
+		"VECB52": {
+			"event": [
+				{
+					"summary": "Valószínűségszámítás és statisztika (THE_00566_N_5_K) - 2NPTI - Dr. Földvári Attila József - Órarend",
+					"location": "Teológia Szemere utcai bejárat földszint nagy terem (Teologia_Szemere_1/B)",
+					"start": "2024-03-11T09:00:00Z",
+					"end": "2024-03-11T12:45:00Z"
+				},
+				{
+					"summary": "Polgári jog (THE_00538_N_5_K) - 3NPTI - Dr. Göndöcs József - Órarend",
+					"location": "Teológia Szemere utcai bejárat földszint nagy terem (Teologia_Szemere_2/B)",
+					"start": "2024-03-12T09:00:00Z",
+					"end": "2024-03-12T12:45:00Z"
+				},
+				{
+					"summary": "Matematika és statisztika a bölcsészettudományban (THE_00620_N_5_K) - 2NPTI - Dr. Horváth András - Órarend",
+					"location": "Teológia Szemere utcai bejárat földszint nagy terem (Teologia_Szemere_1/A)",
+					"start": "2024-03-13T09:00:00Z",
+					"end": "2024-03-13T12:45:00Z"
+				},
+				{
+					"summary": "Demográfia I. (THE_00589_N_5_K) - 2NPTI - Dr. Sándor Judit - Órarend",
+					"location": "Teológia Szemere utcai bejárat földszint nagy terem (Teologia_Szemere_1/B)",
+					"start": "2024-03-14T09:00:00Z",
+					"end": "2024-03-14T12:45:00Z"
+				},
+				{
+					"summary": "Állam- és jogtudományi alapismeretek (THE_00539_N_5_K) - 3NPTI - Dr. Göndöcs József - Órarend",
+					"location": "Teológia Szemere utcai bejárat földszint nagy terem (Teologia_Szemere_1/B)",
+					"start": "2024-03-15T09:00:00Z",
+					"end": "2024-03-15T12:45:00Z"
+				}
+			]
+		}
+	}
+}
