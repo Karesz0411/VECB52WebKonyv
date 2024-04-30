@@ -6,6 +6,7 @@ package hu.the.vecb52.domreadvecb52;
 
 import java.io.*;
 
+import org.xml.sax.*;
 import javax.xml.parsers.*;
 import org.w3c.dom.*;
 /**
@@ -28,13 +29,27 @@ public class DomReadVECB52 {
             
             NodeList children = rootElement.getChildNodes();
             
+            /*
             for (int i = 0; i < children.getLength(); i++) {
-                Node child = children.item(i);
+                Node node = children.item(i);
+                
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    Element element = (Element) node;
+                    System.out.println("Első gyermek: " + element.getTagName());
 
-                if (child.getNodeType() == Node.ELEMENT_NODE) {
-                    System.out.println("A gyökérelemet követő eleme: " + child.getNodeName());
+                    NodeList childNodes = element.getChildNodes();
+                    
+                    for (int j = 0; j < childNodes.getLength(); j++) {
+                        Node childNode = childNodes.item(j);
+                        
+                        if (childNode.getNodeType() == Node.ELEMENT_NODE) {
+                            Element childElement = (Element) childNode;
+                            String textContent = childElement.getTextContent().trim();
+                            System.out.println(childElement.getTagName() +": " + textContent);
+                        }
+                    }
                 }
-            }
+            }*/
         }
         catch (Exception e) {
             e.printStackTrace();
