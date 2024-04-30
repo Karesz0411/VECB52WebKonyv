@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vecb52_class_schedule>
+    <lesson id = "01" type = "gyak">
+        <course>Valószínűségszámítás és Statisztika</course>
+        <teacher>Dr. Földvári Attila</teacher>
+        <location>Teológia szemere 1/B terem</location>
+        <major>Programtervező Informatikus</major>
+        <time>
+            <day>Hétfő</day>
+            <start>10:00</start>
+            <end>13:45</end>
+        </time>
+    </lesson>
+
+    <lesson id = "02" type = "elm">
+        <course>Webkönyvtárak</course>
+        <teacher>Dr. Bednarik László</teacher>
+        <location>Teológia szemere 1/A terem</location>
+        <major>Programtervező Informatikus</major>
+        <time>
+            <day>Kedd</day>
+            <start>12:15</start>
+            <end>13:45</end>
+        </time>
+    </lesson>
+
+    <lesson id = "03" type = "gyak">
+        <course>Webkönyvtárak</course>
+        <teacher>Dr. Bednarik László</teacher>
+        <location>Teológia szemere 1/A terem</location>
+        <major>Programtervező Informatikus</major>
+        <time>
+            <day>Kedd</day>
+            <start>16:00</start>
+            <end>17:30</end>
+        </time>
+    </lesson>
+
+
+    <lesson id = "04" type = "elm">
+        <course>Idegen nyelv</course>
+        <teacher>Dr. Egey Emese</teacher>
+        <location>Teológia szemere 2. terem</location>
+        <major>Programtervező Informatikus</major>
+        <time>
+            <day>Kedd</day>
+            <start>16:30</start>
+            <end>18:20</end>
+        </time>
+    </lesson>
+        
+    <lesson id = "05" type = "elm">
+        <course>Alkalmazások fejlesztése projektlabor II.</course>
+        <teacher>Perlaki Attila</teacher>
+        <location>Online</location>
+        <major>Programtervező Informatikus</major>
+        <time>
+            <day>Szerda</day>
+            <start>12:00</start>
+            <end>15:25</end>
+        </time>
+    </lesson>
+    
+    <lesson id = "06" type = "elm">
+        <course>Komputergrafika és képfeldolgozás</course>
+        <teacher>Dr. Bednarik László</teacher>
+        <location>Teológia szemere 1/A terem</location>
+        <major>Programtervező Informatikus</major>
+        <time>
+            <day>Csütörtök</day>
+            <start>12:45</start>
+            <end>13:45</end>
+        </time>
+    </lesson>
+
+    <lesson id = "07" type = "gyak">
+        <course>Komputergrafika és képfeldolgozás</course>
+        <teacher>Dr. Bednarik László</teacher>
+        <location>Teológia szemere 1/A terem</location>
+        <major>Programtervező Informatikus</major>
+        <time>
+            <day>Csütörtök</day>
+            <start>16:00</start>
+            <end>17:30</end>
+        </time>
+    </lesson>
+
+    <lesson id = "08" type = "gyak">
+        <course>Operációs rendszerek</course>
+        <teacher>Janics Tamás</teacher>
+        <location>Online</location>
+        <major>Programtervező Informatikus</major>
+        <time>
+            <day>Péntek</day>
+            <start>13:30</start>
+            <end>17:30</end>
+        </time>
+    </lesson>
+
+    <lesson id = "09" type = "gyak">
+        <course>Alkalmazások fejlesztése projektlabor II.</course>
+        <teacher>Perlaki Attila</teacher>
+        <location>Online</location>
+        <major>Programtervező Informatikus</major>
+        <time>
+            <day>Szombat</day>
+            <start>9:00</start>
+            <end>12:55</end>
+        </time>
+    </lesson>
+</vecb52_class_schedule>
