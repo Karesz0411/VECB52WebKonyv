@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-hu">
+<head>
+    <title>VECB52 Típusok</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="style.css">
+    <script src="jQuery/jquery-3.7.1.js"></script>
+    <style>
+        .container {
+            max-width: 70%;
+            margin: 20px auto;
+        }
+        h2 {
+            color: #961818;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #555;
+            border-right: 1px solid #555;
+        }
+
+        th {
+            background-color: #444;
+        }
+        tr:hover {
+            background-color: #555;
+        }
+
+        #image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .myPictures {
+            width: 250px;
+            height: auto;
+            margin: 10px;
+            z-index: 1;
+        }
+        .myPictures.hovered {
+            transform: scale(2);
+            border: 3px solid #961818;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <a href = "home.html">Kezdőlap</a>
+        <a href = "different_music_types.html">Különböző műfajok</a>
+        <a href = "favorite_bands.html">Kedvenc zenekarok</a>
+        <a href = "favorite_instruments.html">Kedvenc hangszerek</a>
+        <a href = "registration.html">Űrlap</a>
+    </div>
+    <div class="container">
+        <h2>Metal-Rock Műfajlista</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Műfaj név</th>
+                    <th>Kedvenc bandám a műfajból</th>
+                    <th>Rövid leírás a bandáról</th>
+                    <th>Műfaj ismertető link</th>
+                    <th>YouTube link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rock</td>
+                    <td>AC/DC</td>
+                    <td>Az együttes a rock zenei műfaj úttörője, kiemelkedő csapata. Számos tagcsere után 1975-re alakult ki első stabil felállásuk – Malcolm Young ritmusgitáros, Angus Young szólógitáros, Bon Scott énekes, Phil Rudd dobos, Mark Evans basszusgitáros – és kiadták első albumukat High Voltage címmel. Ugyanebben az évben még egy, T.N.T. című lemezt is kiadtak. A két anyag hamar sikert aratott, ennek köszönhetően lehetőségük nyílt Európában is koncerteket adni. Így egy szélesebb réteg is megismerhette az AC/DC zenéjét.</td>
+                    <td><a href="https://hu.wikipedia.org/wiki/Rock" style="color: #961818; text-decoration: underline; font-weight: bold;">Rock stílus ismertetői</a></td>
+                    <td><a href="https://www.youtube.com/watch?v=gEPmA3USJdI" style="color: #961818; text-decoration: underline; font-weight: bold;">AC/DC - High Way To Hell</a></td>
+                </tr>
+                <tr>
+                    <td>Hard Rock</td>
+                    <td>Guns N' Roses</td>
+                    <td>A Guns N’ Roses amerikai hard rock együttes, amelyet 1985-ben alapítottak a kaliforniai Los Angelesben. Amikor 1986-ban leszerződtek a Geffen Recordshoz, a zenekar Axl Rose énekesből, Slash szólógitárosból, Izzy Stradlin ritmusgitárosból, Duff McKagan basszusgitárosból és Steven Adler dobosból állt. A jelenlegi felállás Rose, Slash, McKagan, Richard Fortus gitáros, Frank Ferrer dobos, valamint Dizzy Reed és Melissa Reese billentyűsökből áll.</td>
+                    <td><a href="https://hu.wikipedia.org/wiki/Hard_rock" style="color: #961818; text-decoration: underline; font-weight: bold;">Hard Rock stílus ismertetői</a></td>
+                    <td><a href="https://www.youtube.com/watch?v=1w7OgIMMRc4" style="color: #961818; text-decoration: underline; font-weight: bold;">Guns N' Roses - Sweet Child O' Mine</a></td>
+                </tr>
+                <tr>
+                    <td>Alternatív Rock</td>
+                    <td>Three Days Grace</td>
+                    <td>A Three Days Grace (rövidítve, illetve stilizálva: 3DG) kanadai rockegyüttes. Post-grunge, alternatív metal és hard rock műfajokban játszanak, korábban nu metalt is játszottak. 1992-ben alakultak meg az ontariói Norwoodban, Groundswell néven. Ezt az elnevezést 1995-ig használták. 1997-ben változtatták meg Three Days Grace-re. A zenekar tagjai szerint a névválasztás azzal a kérdéssel áll kapcsolatban, hogy az ember meg tudná-e változtatni az életét három nap alatt. Díjakat is nyertek dalaikért és albumaikért. Magyarországon is népszerű a zenekar.</td>
+                    <td><a href="https://hu.wikipedia.org/wiki/Alternatív_rock" style="color: #961818; text-decoration: underline; font-weight: bold;">Alternatív Rock stílus ismertetői</a></td>
+                    <td><a href="https://www.youtube.com/watch?v=xqds0B_meys" style="color: #961818; text-decoration: underline; font-weight: bold;">Three Days Grace - Animal I Have Become</a></td>
+                </tr>
+                <tr>
+                    <td>Heavy Metál</td>
+                    <td>Iron Maiden</td>
+                    <td>Az Iron Maiden egy angol heavy metal együttes, a világszerte több mint 100 millió eladott lemezével a műfaj egyik legsikeresebb képviselője.[1][2][3][4] Az együttest Steve Harris basszusgitáros alapította 1975-ben, aki korábban a Gypsy's Kiss és a Smiler együttesek tagja volt. Az 1970-es évek végén kibontakozó New Wave of British Heavy Metal hullámmal kerültek be a köztudatba, debütáló lemezük pedig Iron Maiden címmel 1980-ban jelent meg. Több tagcserét követően arany- és platinalemezek sorát adták ki, a The Number of the Beast (1982), a Piece of Mind (1983), a Powerslave (1984), a Somewhere in Time (1986), és a Seventh Son of a Seventh Son (1988) albumokkal a heavy metal megkerülhetetlen klasszikusaivá váltak, a zenekar pedig kereskedelmi sikereinek csúcsára ért. Az 1990-es években tagcserék és a zenei klíma változása nehezítették az együttes munkáját, de a 2000-es évektől kezdve ismét egyre sikeresebbek.</td>
+                    <td><a href="https://hu.wikipedia.org/wiki/Heavy_metal" style="color: #961818; text-decoration: underline; font-weight: bold;">Heavy Metal ismertetői</a></td>
+                    <td><a href="https://www.youtube.com/watch?v=bePCRKGUwAY" style="color: #961818; text-decoration: underline; font-weight: bold;">Iron Maiden - Fear of the Dark</a></td>
+                </tr>
+                <tr>
+                    <td>Thrash Metal</td>
+                    <td>Metallica</td>
+                    <td>A Metallica amerikai thrash metal zenekart James Hetfield és Lars Ulrich alapította 1981-ben Los Angelesben. Az utóbbi évtizedek egyik legsikeresebb együttese, az 1980-as és az 1990-es évek meghatározó zenekara.</td>
+                    <td><a href="https://hu.wikipedia.org/wiki/Thrash_metal" style="color: #961818; text-decoration: underline; font-weight: bold;">Thrash Metal ismertetői</a></td>
+                    <td><a href="https://www.youtube.com/watch?v=zbSjDVcZA2o" style="color: #961818; text-decoration: underline; font-weight: bold;">Metallica - Master of Puppets</a></td>
+                </tr>
+                <tr>
+                    <td>Power Metal</td>
+                    <td>Sabaton</td>
+                    <td>A Sabaton egy svéd heavy metal/power metal együttes, amely 1999-ben alakult Falunban és azóta nyolc stúdióalbumot, két válogatáslemezt, egy koncertalbumot és két élő DVD/Blu-ray kiadványt adott ki. Számaik többsége történelmi harcokat, háborúkat dolgoz fel. Epikus hangzásukat kórusokkal teszik teljessé. Dalaikban gyakran jelennek meg gitárszólók, szintetizátorszólók. Az együttes neve a lovagi páncélzat lábfejet védő vassarujából származik. 2019. július 19-én jött ki a The Great War albumuk.</td>
+                    <td><a href="https://hu.wikipedia.org/wiki/Power_metal" style="color: #961818; text-decoration: underline; font-weight: bold;">Power Metal ismertetői</a></td>
+                    <td><a href="https://www.youtube.com/watch?v=1snEYPg8TXs" style="color: #961818; text-decoration: underline; font-weight: bold;">Sabaton - The Red Baron</a></td>
+                </tr>
+                <tr>
+                    <td>Metalcore</td>
+                    <td>Bullet for My Valentine</td>
+                    <td>Bullet for My Valentine, gyakran rövidítve BFMV, egy walesi heavy metal együttes Bridgendből, amelyet 1998-ban alapítottak. Az együttest jelenleg Matthew Tuck (vezető ének, ritmusgitár), Michael Paget (szólógitár, háttérének), Jason Bowld (dobok) és Jamie Mathias (basszusgitár, háttérének) alkotja. Korábbi tagok közé tartoznak Michael Thomas, Jason James és Nick Crandle; utóbbi a basszusgitáron játszott. Jeff Killed John néven alakultak és zenekaruk karrierjüket a Metallica és Nirvana dalok feldolgozásával kezdték. A Jeff Killed John hat dalt rögzített, amelyeket nem adtak ki; ezek közül kettő később átdolgozásra került Bullet for My Valentine néven. A stílusváltás a Jeff Killed John-tól vezetett ahhoz, hogy az együttes megváltoztassa a nevét. 2002-ben az együttes öt albumos szerződést kötött a Sony BMG-vel. Az együttes kijelentette, hogy zenéjüket olyan klasszikus metal előadók befolyásolják, mint a Metallica, Iron Maiden és Slayer. Az együttes része a Cardiff-i zenei színtérnek.</td>
+                    <td><a href="https://hu.wikipedia.org/wiki/Metalcore" style="color: #961818; text-decoration: underline; font-weight: bold;">Metalcore ismertetői</a></td>
+                    <td><a href="https://www.youtube.com/watch?v=G3gX2Hb6MCM" style="color: #961818; text-decoration: underline; font-weight: bold;">Bullet For My Valentine - Omen</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="image-container">
+        <img class="myPictures" src="pictures/a7x_logo.jpg" alt="a7x_logo">
+        <img class="myPictures" src="pictures/aild_logo.jpg" alt="as_i_lay_dying_logo">
+        <img class="myPictures" src="pictures/dragonforce_logo.jpg" alt="dragonforce_logo">
+        <br>
+        <img class="myPictures" src="pictures/skillet_logo.jpg" alt="skillet_logo">
+        <img class="myPictures" src="pictures/slipknot_logo.jpg" alt="slipknot_logo">
+        <img class="myPictures" src="pictures/acdc_logo.png" alt="acdc_logo">
+        <br>
+        <img class="myPictures" src="pictures/gnr_logo.png" alt="gnr_logo">
+        <img class="myPictures" src="pictures/three_days_grace_logo.png" alt="three_days_grace_logo">
+        <img class="myPictures" src="pictures/iron_maiden_logo.png" alt="iron_maiden_logo">
+        <img class="myPictures" src="pictures/metallica_logo.png" alt="metallica_logo">
+        <br>
+        <img class="myPictures" src="pictures/sabaton_logo.png" alt="sabaton_logo">
+        <img class="myPictures" src="pictures/bfmv_logo.png" alt="bfmv_logo">
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("img").hover(
+                function() {
+                    $(this).addClass("hovered").animate({ 
+                        width: '+=50px',
+                        height: '+=50px'
+                    }, 200);
+                },
+                function() {
+                    $(this).removeClass("hovered").animate({ 
+                        width: '-=50px',
+                        height: '-=50px'
+                    }, 200);
+                }
+            );
+        });
+    </script>
+</body>
+</html>
+

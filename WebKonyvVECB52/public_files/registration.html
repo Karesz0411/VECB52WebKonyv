@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-hu">
+<head>
+    <title>VECB52 Űrlap</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="style.css">
+    <script src="jQuery/jquery-3.7.1.js"></script>
+    <script src="form_validate.js"></script>
+    <style>
+        #form {
+            background-color: #333;
+            padding: 3%;
+            border-radius: 10px;
+            margin: 5% auto;
+            width: 40%;
+        }
+        textarea,
+        input[list],
+        input[type="date"],
+        input[type="color"],
+        input[type="text"],
+        input[type="number"],
+        input[type="range"],
+        input[list] {
+            background-color: #afafaf;
+            color: #000000;
+            border: 1px solid #d80000;
+            border-radius: 5px;
+            padding: 1%;
+            margin-bottom: 2%;
+            width: 95%;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 95%;
+            margin: 0;
+            background-color: #afafaf;
+            border: 1px solid #d80000;
+            border-radius: 5px;
+            height: 10px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background-color: #d80000;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #d80000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <a href = "home.html">Kezdőlap</a>
+        <a href = "different_music_types.html">Különböző műfajok</a>
+        <a href = "favorite_bands.html">Kedvenc zenekarok</a>
+        <a href = "favorite_instruments.html">Kedvenc hangszerek</a>
+        <a href = "registration.html">Űrlap</a>
+    </div>
+
+    <form id = "form" name = "form" action="form_validate.html" method="GET" target = "_self">
+        <label for = "name">Név:</label>
+        <input type = "text" id = "name" name = "name" required autocomplete="off" pattern="[a-zA-ZöüóőúéáűíÖÜÓŐÚÉÁÍ]{5,50}"/>
+        <br>
+
+        <label for = "age">Életkor:</label>
+        <input type = "number" id = "age" name = "age" min = "1" max = "100" />
+        <br>
+
+        <label for="textarea_input">Mi a véleményed a metal műfajról:</label>
+        <textarea id="textarea_input" name="textarea_input" rows="4" cols="50" required></textarea>
+        <br>
+
+        <label for = "favorite_band">Kedvenc zenekarod:</label>
+        <input list = "favorite_band" name = "favorite_band" id = "favorite_band">
+        <datalist id = "favorite_band">
+            <option value = "Avenged Sevenfold">A7x</option>
+            <option value = "Disturbed">Disturbed</option>
+            <option value = "Slipknot">Slipknot</option>
+            <option value = "As I Lay Dying">AILD</option>
+            <option value = "Five Finger Death Punch">FFDP</option>
+        </datalist>
+        <br>
+
+        <label for="checkbox_input">Jelöld be ha hallgatnád a műfajt:</label>
+        <input type="checkbox" id="checkbox_input" name="checkbox_input">
+        <br>
+
+        <label for="radio_input">Tetszik a kérdőív?</label>
+        <input type="radio" id="radio_input_1" name="radio_input" value="igen">
+        <label for="radio_input_1">igen</label>
+        <input type="radio" id="radio_input_2" name="radio_input" value="nem">
+        <label for="radio_input_2">nem</label>
+        <br><br>
+
+        <label for="color_input">Kedvenc színed:</label>
+        <input type="color" id="color_input" name="color_input">
+        <br>
+
+        <label for="date_input">Kedvenc dátumod:</label>
+        <input type="date" id="date_input" name="date_input">
+        <br>
+        
+        <label for = "rate">Mennyire tetszik a banda:</label>
+        <span class = "left_value">0</span>
+        <input type = "range" id = "rate" name = "rate" min = "0" max = "100" value = "5" class = "slider">
+        <span class = "right value">100</span>
+        <br>
+
+        <input type="submit" value="Send" form="form">
+    </form>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-hu">
+<head>
+    <title>VECB52 Hangszerek</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="style.css">
+    <script src="jQuery/jquery-3.7.1.js"></script>
+    <script src="video_controller.js"></script>
+    <style>
+        button {
+            background-color: #d80000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff0000;
+        }
+        #my_video {
+            display: block;
+            width: 800px;
+            height: auto;
+            margin: auto;
+        }
+        .myButton {
+            flex-basis: 33%;
+            max-width: 33%;
+        }
+        .buttonContainer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .list-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .list {
+            flex-basis: 45%;
+        }
+        .list h2 {
+            color: #d80000;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .list ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .list li {
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: #686767;
+        }
+        .list li img {
+            width: 200px;
+            height: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <a href="home.html">Kezdőlap</a>
+        <a href="different_music_types.html">Különböző műfajok</a>
+        <a href="favorite_bands.html">Kedvenc zenekarok</a>
+        <a href="favorite_instruments.html">Kedvenc hangszerek</a>
+        <a href="registration.html">Űrlap</a>
+    </div>
+
+    <div id="instrumentList" class="list-container"></div>
+
+    <script>
+        $(document).ready(function() {
+            $.getJSON("instruments.json", function(data) {
+                let metalInstruments = data.music_genres.metal.instruments;
+                let rockInstruments = data.music_genres.rock.instruments;
+                let instrumentList = $("#instrumentList");
+
+                let metalList = $("<ul class='list'><h2>Metal hangszerek</h2></ul>");
+                let rockList = $("<ul class='list'><h2>Rock hangszerek</h2></ul>");
+
+                metalInstruments.forEach(function(instrument) {
+                    let li = $("<li><img src='" + instrument.image + "' alt='" + instrument.name + "'>" + instrument.name + "</li>");
+                    metalList.append(li);
+                });
+
+                rockInstruments.forEach(function(instrument) {
+                    let li = $("<li><img src='" + instrument.image + "' alt='" + instrument.name + "'>" + instrument.name + "</li>");
+                    rockList.append(li);
+                });
+
+                instrumentList.append(metalList);
+                instrumentList.append(rockList);
+            });
+        });
+    </script>
+
+    <video width="800" height="auto" id="my_video">
+        <source src="pictures/instrument_video.mp4" type="video/mp4">
+    </video>
+    <br>
+
+    <div class="buttonContainer">
+        <button class="myButton" onclick="playOrPause()">Lejátsz / Megáll</button>
+        <button class="myButton" onclick="makeItBig()"> Méret Növel </button>
+        <button class="myButton" onclick="makeItSmall()"> Méret Csökkent </button>
+        <button class="myButton" onclick="makeItNormal()"> Méret visszaállít </button>
+        <button class="myButton" onclick="volumeUp()">Hangerő fel</button>
+        <button class="myButton" onclick="volumeDown()">Hangerő le</button>
+        <button class="myButton" onclick="speedUp()">Gyorsít</button>
+        <button class="myButton" onclick="speedDown()">Lassít</button>
+        <button class="myButton" onclick="speedDefault()">Sebesség visszaállít</button>
+    </div>
+    
+</body>
+</html>

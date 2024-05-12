@@ -1,0 +1,49 @@
+{
+  "bands": [
+    {
+      "band_name": "Avenged Sevenfold",
+      "image": "pictures/a7x_concert.png",
+      "members": [
+        {"name": "M. Shadows"},
+        {"name": "Synyster Gates"},
+        {"name": "Zacky Vengeance"},
+        {"name": "Johnny Christ"},
+        {"name": "Brooks Wackerman"}
+      ]
+    },
+    {
+      "band_name": "Disturbed",
+      "image": "pictures/disturbed_members.png",
+      "members": [
+        {"name": "David Draiman"},
+        {"name": "Dan Donegan"},
+        {"name": "John Moyer"},
+        {"name": "Mike Wengren"}
+      ]
+    },
+    {
+      "band_name": "Bullet for My Valentine",
+      "image": "pictures/bfmv_members.png",
+      "members": [
+        {"name": "Matthew Tuck"},
+        {"name": "Michael Paget"},
+        {"name": "Jamie Mathias"},
+        {"name": "Jason Bowld"}
+      ]
+    },
+    {
+      "band_name": "Slipknot",
+      "image": "pictures/slipknot_members.png",
+      "members": [
+        {"name": "Corey Taylor"},
+        {"name": "Jim Root"},
+        {"name": "Mick Thomson"},
+        {"name": "Craig Jones"},
+        {"name": "Sid Wilson"},
+        {"name": "Shawn Crahan"},
+        {"name": "Jay Weinberg"},
+        {"name": "Alessandro Venturella"}
+      ]
+    }
+  ]
+}

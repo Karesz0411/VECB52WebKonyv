@@ -1,0 +1,24 @@
+{
+  "music_genres": {
+    "metal": {
+      "instruments": [
+        {"name": "Elektromos Gitár", "image": "pictures/electric_guitar.png"},
+        {"name": "Basszus Gitár", "image": "pictures/bass_guitar.png"},
+        {"name": "Dobok", "image": "pictures/drums.png"},
+        {"name": "Zongora", "image": "pictures/piano.png"},
+        {"name": "Szintetizátor", "image": "pictures/synthetizator.PNG"},
+        {"name": "Hegedű", "image": "pictures/violin.PNG"}
+      ]
+    },
+    "rock": {
+      "instruments": [
+        {"name": "Elektromos Gitár", "image": "pictures/electric_guitar.png"},
+        {"name": "Basszus Gitár", "image": "pictures/bass_guitar.png"},
+        {"name": "Dobok", "image": "pictures/drums.png"},
+        {"name": "Zongora", "image": "pictures/piano.png"},
+        {"name": "Harmónika", "image": "pictures/harmonica.png"},
+        {"name": "Szaxofon", "image": "pictures/saxophone.png"}
+      ]
+    }
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-hu">
+<head>
+    <title>VECB52 Kezdőlap</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="stylesheet" href="style.css">
+    <script src="jQuery/jquery-3.7.1.js"></script>
+    <style>
+        h1 {
+            background-color: rgba(24, 22, 22, 1);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        body {
+            background-image: url('pictures/home_background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .fixed-text-container {
+            margin-top: 25%;
+            margin-right: 30%;
+            margin-left: 25%;
+        }
+        .fixed-text {
+            background-color: rgba(100, 97, 97, 0.98);
+            padding: 10px;
+            border-radius: 10px;
+            color: rgb(172, 168, 168);
+        }
+        #image-container {
+            position: absolute;
+            top: 0;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            animation: floatImages 30s linear infinite;
+        }
+        .myPictures {
+            margin: 0%;
+            height: 200px;
+            width: auto;
+            display: inline-block;
+        }
+        @keyframes floatImages {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <a href="home.html">Kezdőlap</a>
+        <a href="different_music_types.html">Különböző műfajok</a>
+        <a href="favorite_bands.html">Kedvenc zenekarok</a>
+        <a href="favorite_instruments.html">Kedvenc hangszerek</a>
+        <a href="registration.html">Űrlap</a>
+    </div>
+
+    <div id="image-container">
+        <img class="myPictures" src="pictures/a7x_members.png" alt="a7x_members">
+        <img class="myPictures" src="pictures/fir_members.png" alt="fir_members">
+        <img class="myPictures" src="pictures/tdg_members.png" alt="tdg_members">
+        <img class="myPictures" src="pictures/aild_members.png" alt="aild_members">
+        <img class="myPictures" src="pictures/bfmv_members.png" alt="bfmv_members">
+        <img class="myPictures" src="pictures/korn_members.png" alt="korn_members">
+        <img class="myPictures" src="pictures/slipknot_members.png" alt="slipknot_members">
+        <img class="myPictures" src="pictures/disturbed_members.png" alt="disturbed_members">
+        <img class="myPictures" src="pictures/green_day_members.png" alt="green_day_members">
+    </div>
+
+    <h1>Üdvözöllek a kezdőlapon</h1>
+
+    <div class="fixed-text-container">
+        <div class="fixed-text">
+            <h2>Üdvözöllek a Metal-Rock Világában!</h2>
+            <p>Üdvözlünk a hangok és szenvedélyek világában, ahol a zene nem csupán dallamokat hordoz, hanem életet és erőt. A metal-rock műfaj olyan, mint egy viharos óceán, amely mélyen megérinti a lelkeket és felemel a földi gondok fölé.</p>
+            <p><strong>Miért szeretjük a Metal-Rockot?</strong>
+            <br>
+            A metal-rock nem pusztán zene. Ez egy életstílus, egy közösség, amely összefogja azokat, akik a különleges hangzásvilágot és az őszinte kifejezést keresik. A düh és az energiától az érzelemig és a gondolatokig, a metal-rock minden érzést és gondolatot átölel.</p>
+            <p><strong>A Stílusok és a Sokszínűség</strong>
+            <br>
+            A metal-rock világa gazdag és változatos. Legyen szó a klasszikus heavy metal erejéről, a thrash ütemek robbanásáról, a progresszív metal kifinomultságáról vagy a black metal sötét misztikumáról, mindannyian megtalálhatják a saját hangjukat és színüket ebben a műfajban.</p>
+            <p><strong>Koncertélmény: Közösség és Kapcsolódás</strong>
+            <br>
+            Nincs olyan, mint egy metal-rock koncert élménye. A hatalmas hangfalak dübörgése, a színpadon tomboló energia és a rajongók közös üvöltése egy olyan élményt teremt, amely összeköti a közönséget egyetlen hatalmas hanghullámban.</p>
+            <p><strong>Kövess minket!</strong>
+            <br>
+            Csatlakozz hozzánk ezen az izgalmas utazáson! Kövesd weboldalunkat, hogy mindig naprakész legyél a legfrissebb metal-rock hírekkel, albumajánlókkal és koncertinformációkkal kapcsolatban. Legyél részese ennek a szenvedélyes közösségnek, és fedezd fel a metal-rock világának végtelen sokszínűségét és erejét!</p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.fixed-text-container').hover(function(){
+                $(this).css({'transform': 'scale(1.1)', 'transition': 'transform 0.5s'});
+            }, function(){
+                $(this).css({'transform': 'scale(1)', 'transition': 'transform 0.5s'});
+            });
+        });
+    </script>
+
+</body>
+</html>

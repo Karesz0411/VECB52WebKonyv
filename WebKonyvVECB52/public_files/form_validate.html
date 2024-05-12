@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Űrlap adatok</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            const name = urlParams.get('name');
+            const age = urlParams.get('age');
+            const opinion = urlParams.get('textarea_input');
+            const favoriteBand = urlParams.get('favorite_band');
+            const checkboxChecked = urlParams.has('checkbox_input') ? "Igen" : "Nem";
+            const radioOption = urlParams.get('radio_input');
+            const color = urlParams.get('color_input');
+            const date = urlParams.get('date_input');
+            const rate = urlParams.get('rate');
+
+            document.body.innerHTML += "<strong>Név:</strong> " + name + "<br><br>";
+            document.body.innerHTML += "<strong>Életkor:</strong> " + age + "<br><br>";
+            document.body.innerHTML += "<strong>Vélemény a metal műfajról:</strong> " + opinion + "<br><br>";
+            document.body.innerHTML += "<strong>Kedvenc zenekar:</strong> " + favoriteBand + "<br><br>";
+            document.body.innerHTML += "<strong>Hallgatnád-e a műfajt:</strong> " + checkboxChecked + "<br><br>";
+            document.body.innerHTML += "<strong>Tetszik a kérdőív?</strong> " + radioOption + "<br><br>";
+            document.body.innerHTML += "<strong>Kedvenc szín:</strong> <span style='color:" + color + "'>" + color + "</span><br><br>";
+            document.body.innerHTML += "<strong>Kedvenc dátum:</strong> " + date + "<br><br>";
+            document.body.innerHTML += "<strong>Banda tetszésének mértéke:</strong> " + rate + "<br><br>";
+
+            document.body.innerHTML += '<a href="http://localhost:3000/home">Vissza az weboldalra</a>';
+        });
+    </script>
+</body>
+</html>
