@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>VECB52_0416</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #terulet {
+            background-color: rgb(146, 141, 141);
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>JQuery feladat</h1></header>
+    <p>Kattints az Adatok Betöltése gombra a fájl betöltéséhez</p>
+    
+    <div id="terulet">Terület</div>
+    <br>
+    <button id="betolt">Adatok betöltése</button>
+    <script>
+        $(document).ready(function() {
+            $("#betolt").click(function() {
+                $.getJSON("VECB52_orarendobject.json", function(data) {
+                    let schedule = data.vecb52_class_schedule;
+                    let address = schedule.address;
+                    let phoneNumbers = schedule.phone_numbers;
+
+                    let content = "<h3>Tokaj Hegyalja Egyetem</h3><br>";
+                    content += "<b>Cím:</b> " + address.zipcode + " " + address.city + " " + address.street + "<br><br>";
+                    content += "<b>Telefonszám:</b> <ul>";
+                    
+                        phoneNumbers.forEach(function(phone) {
+                            content += "<li>" + phone.type + ": " + phone.number + "</li>";
+                        });
+
+
+                    content += "</ul><br>";
+                    content += "<b>Órarend - 2024 tavasz</b> <br><br>";
+                    content += "<b>Tárgy:</b> " + schedule.subject + "<br><br>";
+                    content += "<b>Oktató:</b> " + schedule.teacher + "<br><br>";
+                    content += "<b>Szak:</b> " + schedule.major + "<br><br>";
+                    content += "<b>Időpont:</b> " + schedule.schedule.day + " " + schedule.schedule.from + "-" + schedule.schedule.to + "<br><br>";
+                    content += "<b>Helyszín:</b> " + schedule.location;
+
+                    $("#terulet").html(content);
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

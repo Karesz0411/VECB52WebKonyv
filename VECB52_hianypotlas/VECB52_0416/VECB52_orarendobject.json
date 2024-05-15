@@ -1,0 +1,28 @@
+{
+    "vecb52_class_schedule": {
+        "address": {
+            "zipcode": "3950",
+            "city": "Sárospatak",
+            "street": "Eötvös út 7"
+        },
+        "phone_numbers": [
+            {
+                "type": "Vezetékes",
+                "number": "0630 000-0000"
+            },
+            {
+                "type": "Mobil",
+                "number": "0630 000-0000"
+            }
+        ],
+        "subject": "Valószínűségszámítás és Statisztika",
+        "schedule": {
+            "day": "Hétfő",
+            "from": "10:00",
+            "to": "13:45"
+        },
+        "major": "Programtervező Informatikus",
+        "location": "Teológia szemere 1/B terem",
+        "teacher": "Attila Alföldi"
+    }
+}

@@ -1,0 +1,97 @@
+<html lang="hu">
+<head>
+    <title>VECB52_0416</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <script src="jQuery/jquery-3.7.1.js"></script> 
+<style>
+    input
+    {
+        background-color: rgb(166, 207, 235);
+    }
+</style>
+</head>
+<body>
+    <header><h1>JQuery feladat</h1></header>
+
+    <p>Adjon meg két számot</p>
+
+    <form id="calculatorForm">
+        <label for="a">A: </label>
+        <input type="number" id="a" name="num1" required>
+        <br>
+
+        <label for="b">B: </label>
+        <input type="number" id="b" name="num2" required>
+        <br>
+
+        <input type="radio" id="szorzas" name="operation" value="szorzas" required>
+        <label for="multiply">A * B</label>
+        <br>
+        
+        <input type="radio" id="osztas" name="operation" value="osztas">
+        <label for="divide">A / B</label>
+        <br>
+        
+        <input type="radio" id="osszeadas" name="operation" value="osszeadas">
+        <label for="add">A + B</label>
+        <br>
+        
+        <input type="radio" id="kivonas" name="operation" value="kivonas">
+        <label for="subtract">A - B</label>
+        <br>
+        
+        <button type="button" id="szamol">Számol</button>
+
+        <p>Eredmény: </p>
+        <p id="eredmeny"></p>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+        $("#szamol").click(function() {
+        let a = parseInt($('#a').val());
+        let b = parseInt($('#b').val());
+        
+        if (isNaN(a) || isNaN(b)) {
+            alert("Kérem, adja meg mindkét számot!");
+            return;
+        }
+        
+        let muvelet = $('input[name="operation"]:checked').val();
+        if (!muvelet) {
+            alert("Kérem, válasszon műveletet!");
+            return;
+        }
+        
+        let eredmeny;
+        switch (muvelet) {
+            case 'osszeadas':
+                eredmeny = a + b;
+            break;
+            case 'kivonas':
+                eredmeny = a - b;
+            break;
+            case 'szorzas':
+                eredmeny = a * b;
+            break;
+            case 'osztas':
+            if (b === 0) {
+                alert("Nullával nem lehet osztani!");
+                return;
+            }
+            eredmeny = a / b;
+            break;
+            default:
+            alert("Hibás művelet!");
+            return;
+        }
+
+        $('#eredmeny').text(eredmeny);
+        });
+    });
+    </script>
+</body>
+</html>

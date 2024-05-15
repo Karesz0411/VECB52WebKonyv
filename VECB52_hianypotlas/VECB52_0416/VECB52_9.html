@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>VECB52_0416</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #terulet {
+            background-color: rgb(146, 141, 141);
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>JQuery feladat</h1></header>
+    <p>Kattints az Adatok Betöltése gombra a fájl betöltéséhez</p>
+    
+    <div id="terulet">Terület</div>
+    <br>
+    <button id="betolt">Adatok betöltése</button>
+    <script>
+        $(document).ready(function() {
+            $("#betolt").click(function() {
+                $.getJSON("VECB52_orarend.json", function(data) {
+                    let lesson = data.vecb52_class_schedule.lesson[0];
+                    
+                    $("#terulet").html("<h3>Tokaj Hegyalja Egyetem</h3><br>");
+                    $("#terulet").append("<b>Tárgy:</b> " + lesson.course + "<br>");
+                    $("#terulet").append("<b>Oktató:</b> " + lesson.teacher + "<br>");
+                    $("#terulet").append("<b>Szak:</b> " + lesson.major + "<br>");
+                    $("#terulet").append("<b>Időpont:</b> " + lesson.time.day + " " + lesson.time.start + "-" + lesson.time.end + "<br>");
+                    $("#terulet").append("<b>Helyszín:</b> " + lesson.location + "<br><br>");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

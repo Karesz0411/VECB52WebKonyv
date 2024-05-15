@@ -1,0 +1,53 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="VECB52_orarend">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="lesson" type="lessonType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="lessonType">
+        <xs:sequence>
+            <xs:element name="course" type="xs:string"/>
+            <xs:element name="teacher" type="xs:string"/>
+            <xs:element name="location" type="xs:string"/>
+            <xs:element name="major" type="xs:string"/>
+            <xs:element name="time" type="timeType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="type" type="lessonTypeType" default="elm"/>
+    </xs:complexType>
+
+    <xs:simpleType name="lessonTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="elm"/>
+            <xs:enumeration value="gyak"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="timeType">
+        <xs:sequence>
+            <xs:element name="day" type="dayType"/>
+            <xs:element name="start" type="startAndEndType"/>
+            <xs:element name="end" type="startAndEndType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="dayType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Hétfő"/>
+            <xs:enumeration value="Kedd"/>
+            <xs:enumeration value="Szerda"/>
+            <xs:enumeration value="Csütörtök"/>
+            <xs:enumeration value="Péntek"/>
+            <xs:enumeration value="Szombat"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="startAndEndType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="7"/>
+            <xs:maxInclusive value="18"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

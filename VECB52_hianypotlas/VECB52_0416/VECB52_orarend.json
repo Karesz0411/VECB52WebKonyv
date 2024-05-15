@@ -1,0 +1,105 @@
+{
+    "vecb52_class_schedule": {
+      "lesson": [
+        {
+          "course": "Valószínűségszámítás és Statisztika",
+          "teacher": "Dr. Földvári Attila",
+          "location": "Teológia szemere 1/B terem",
+          "major": "Programtervező Informatikus",
+          "time": {
+            "day": "Hétfő",
+            "start": "10:00",
+            "end": "13:45"
+          }
+        },
+        {
+          "course": "Webkönyvtárak",
+          "teacher": "Dr. Bednarik László",
+          "location": "Teológia szemere 1/A terem",
+          "major": "Programtervező Informatikus",
+          "time": {
+            "day": "Kedd",
+            "start": "12:15",
+            "end": "13:45"
+          }
+        },
+        {
+          "course": "Webkönyvtárak",
+          "teacher": "Dr. Bednarik László",
+          "location": "Teológia szemere 1/A terem",
+          "major": "Programtervező Informatikus",
+          "time": {
+            "day": "Kedd",
+            "start": "16:00",
+            "end": "17:30"
+          }
+        },
+        {
+          "course": "Idegen nyelv",
+          "teacher": "Dr. Egey Emese",
+          "location": "Teológia szemere 2. terem",
+          "major": "Programtervező Informatikus",
+          "time": {
+            "day": "Kedd",
+            "start": "16:30",
+            "end": "18:20"
+          }
+        },
+        {
+          "course": "Alkalmazások fejlesztése projektlabor II.",
+          "teacher": "Perlaki Attila",
+          "location": "Online",
+          "major": "Programtervező Informatikus",
+          "time": {
+            "day": "Szerda",
+            "start": "12:00",
+            "end": "15:25"
+          }
+        },
+        {
+          "course": "Komputergrafika és képfeldolgozás",
+          "teacher": "Dr. Bednarik László",
+          "location": "Teológia szemere 1/A terem",
+          "major": "Programtervező Informatikus",
+          "time": {
+            "day": "Csütörtök",
+            "start": "12:45",
+            "end": "13:45"
+          }
+        },
+        {
+          "course": "Komputergrafika és képfeldolgozás",
+          "teacher": "Dr. Bednarik László",
+          "location": "Teológia szemere 1/A terem",
+          "major": "Programtervező Informatikus",
+          "time": {
+            "day": "Csütörtök",
+            "start": "16:00",
+            "end": "17:30"
+          }
+        },
+        {
+          "course": "Operációs rendszerek",
+          "teacher": "Janics Tamás",
+          "location": "Online",
+          "major": "Programtervező Informatikus",
+          "time": {
+            "day": "Péntek",
+            "start": "13:30",
+            "end": "17:30"
+          }
+        },
+        {
+          "course": "Alkalmazások fejlesztése projektlabor II.",
+          "teacher": "Perlaki Attila",
+          "location": "Online",
+          "major": "Programtervező Informatikus",
+          "time": {
+            "day": "Szombat",
+            "start": "9:00",
+            "end": "12:55"
+          }
+        }
+      ]
+    }
+  }

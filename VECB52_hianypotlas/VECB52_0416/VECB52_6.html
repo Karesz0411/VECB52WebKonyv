@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>VECB52_0416</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <script src="jQuery/jquery-3.7.1.js"></script>
+    <style>
+        #box {
+            background-color: green;
+            font-size: 22px;
+            width: 180px;
+            height:180px; 
+            text-align: left;
+            padding-left: 15px;
+        }
+        button {
+            text-align: bold; 
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>JQuery feladatok - Attribútum</h1>
+
+    <button id="szoveg"><b>Szöveg</button>
+    <button id="html">HTML kód</button>
+    <button id="ertek">Érték</button>
+    <button id="parameter">Paraméter</button>
+    <br>
+
+    <div id="box">
+        <p id="html-kod">THE - PTI</p>
+        <br>
+
+        <p>....</p>
+    </div>
+
+    <br>
+    <form>
+        <label for="nev">Név: </label>
+        <input type="text" id="nev">
+        <br>
+
+        <label for="email">E-mail: </label>
+        <input type="emai" id="email">
+        <br>
+
+        <label for="password">Jelszó: </label>
+        <input type="password" id="password">
+        <br>
+    </form>
+
+    <button id="login">Jelentkezés</button>
+
+    <p>Forrás: <a id="link" href="https://www.tutorialspoint.com/jquery/index.htm">https://www.tutorialspoint.com/jquery/index.htm </a></p>
+
+    <script>
+        $(document).ready(function(){
+            $("#szoveg").click(function(){
+                alert("HTML kód...");
+            });
+
+            $("#html").click(function(){
+                let htmlkod = $("#html-kod").html(); 
+                alert(htmlkod);
+            });
+
+            $("#ertek").click(function(){
+                let nevErtek = $("#nev").val(); 
+                alert(nevErtek);
+            });
+
+            $("#parameter").click(function(){
+                let link = $("#link").attr("href"); 
+                let divWidth = $("#box").width(); 
+                let divHeight = $("#box").height(); 
+                let terulet = divWidth * divHeight;
+                alert("Paraméter értéke: " + link + "\n" +
+                    "Paraméter értéke: "+ terulet);
+            });
+        });
+    </script>
+</body>
+</html>
